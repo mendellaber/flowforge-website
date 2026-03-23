@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact â FlowForge AI Automation</title>
+<meta name="description" content="Book a free audit with FlowForge. We'll identify the highest-leverage automation in your business and show you exactly what the ROI looks like.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://flowforge.io/contact">
+<meta property="og:title" content="Get a Free Audit â FlowForge">
+<meta property="og:description" content="20 minutes. We'll find the automation that pays for itself fastest in your business.">
+<meta property="og:url" content="https://flowforge.io/contact">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --orange: #FF6B35;
+  --orange-dim: rgba(255,107,53,0.12);
+  --bg: #080808;
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.07);
+  --text: #f5f5f7;
+  --muted: rgba(255,255,255,0.45);
+  --radius: 18px;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(24px); background: rgba(8,8,8,0.7); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icon { width: 30px; height: 30px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.nav-logo-text { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+.nav-cta { background: var(--orange); color: white; text-decoration: none; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; transition: opacity 0.2s; }
+.nav-cta:hover { opacity: 0.88; }
+
+.contact-layout { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 64px; }
+.contact-left { padding: 80px 60px 80px 40px; max-width: 560px; justify-self: end; }
+.contact-left .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; }x; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; }
+.contact-left h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+.contact-left > p { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 48px; font-weight: 300; }
+.what-to-expect h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
+.expect-step { display: flex; gap: 16px; margin-bottom: 22px; }
+.expect-num { width: 28px; height: 28px; border-radius: 50%; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+.expect-step h4 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+.expect-step p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.contact-chips { display: flex; flex-direction: column; gap: 10px; margin-top: 48px; }
+.chip { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; }
+.chip-icon { font-size: 16px; flex-shrink: 0; }
+.chip-text { font-size: 13px; color: var(--muted); }
+.chip-text strong { color: var(--text); font-weight: 500; }
+
+.contact-right { padding: 80px 40px 80px 60px; }
+.contact-form-wrap { max-width: 500px; }
+.contact-form-wrap h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+.contact-form-wrap .sub { font-size: 14px; color: var(--muted); margin-bottom: 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.03em; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group select option { background: #1a1a1a; color: var(--text); }
+.submit-btn { width: 100%; background: var(--orange); color: white; border: none; border-radius: 50px; padding: 16px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,107,53,0.35); }
+.form-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 16px; line-height: 1.5; }
+
+.success-state { display: none; text-align: center; padding: 60px 0; }
+.success-state .icon { font-size: 56px; margin-bottom: 24px; }
+.success-state h2 { font-size: 28px; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+.success-state p { font-size: 16px; color: var(--muted); line-height: 1.6; }
+
+footer { padding: 60px 24px; border-top: 1px solid var(--border); }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-icon { width: 28px; height: 28px; background: var(--orange); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.footer-logo-text { font-size: 15px; font-weight: 700; color: var(--text); }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 13px; color: var(--muted); }
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-left { padding: 80px 24px 40px; max-width: 100%; justify-self: start; }
+  .contact-right { padding: 0 24px 80px; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">â¡</div>
+      <span class="nav-logo-text">FlowForge</span>
+    </a>
+    <div class="nav-links">
+      <a href="/services.html">Services</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/contact.html" class="active">Contact</a>
+    </div>
+    <a href="/contact.html" class="nav-cta">Free Audit</a>
+  </div>
+</nav>
+
+<div class="contact-layout">
+  <div class="contact-left fade-up">
+    <div class="eyebrow">ð Free Audit</div>
+    <h1>Let's find your highest-leverage automation.</h1>
+    <p>20 minutes on a call. We'll map your current workflow, identify where automation has the biggest ROI, and give you a concrete recommendation â no obligation.</p>
+
+    <div class="what-to-expect">
+      <h3>What to Expect</h3>
+      <div class="expect-step">
+        <div class="expect-num">1</div>
+        <div>
+          <h4>You fill out the form</h4>
+          <p>Tell us about your business and what's taking the most time. Takes 2 minutes.</p>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">2</div>
+        <div>
+          <h4>We respond within 24 hours</h4>
+          <p>You'll hear back from Mendel directly â not a sales bot, not a VA.</p>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">3</div>
+        <div>
+          <h4>20-minute audit call</h4>
+          <p>We map your workflow, identify the gaps, and tell you exactly what we'd build and what it would cost.</p>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">4</div>
+        <div>
+          <h4>You decide</h4>
+          <p>No pressure. You get the audit findings regardless of whether you move forward.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-chips">
+      <div class="chip">
+        <div class="chip-icon">âï¸</div>
+        <div class="chip-text"><strong>getflowforge@gmail.com</strong> â email us directly</div>
+      </div>
+      <div class="chip">
+        <div class="chip-icon">ð</div>
+        <div class="chip-text"><strong>Remote-first</strong> â we work with clients everywhere</div>
+      </div>
+      <div class="chip">
+        <div class="chip-icon">â¡</div>
+        <div class="chip-text"><strong>3â5 day turnaround</strong> on most deployments</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right fade-up" style="transition-delay:0.15s">
+    <div class="contact-form-wrap">
+      <h2>Tell us about your business</h2>
+      <p class="sub">We read every submission personally.</p>
+
+      <div id="form-wrap">
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Alex Johnson" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" placeholder="alex@company.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" placeholder="Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label for="service">What are you most interested in?</label>
+            <select id="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>AI Pre-Call Sales Intelligence</option>
+              <option>Lead Response Automation</option>
+              <option>AI Cold Calling Agent</option>
+              <option>SMS Tenant Maintenance System</option>
+              <option>Reporting Automation</option>
+              <option>Custom Build â I have a specific workflow</option>
+              <option>Not sure yet â tell me what fits</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="problem">What's the workflow you want to fix?</label>
+            <textarea id="problem" placeholder="Describe the repetitive task or bottleneck â the more specific, the better." rows="4"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send My Audit Request â</button>
+          <p class="form-note">We typically respond within 24 hours on business days.</p>
+        </form>
+      </div>
+
+      <div class="success-state" id="success">
+        <div class="icon">â</div>
+        <h2>We got it â thanks!</h2>
+        <p>Mendel will personally review your submission and reach out within 24 hours to schedule your audit call.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">
+      <div class="footer-logo-icon">â¡</div>
+      <span class="footer-logo-text">FlowForge</span>
+    </a>
+    <div class="footer-links">
+      <a href="/services.html">Services</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">Â© 2026 FlowForge. getflowforge@gmail.com</div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('success').style.display = 'block';
+}
+</script>
+</body>
+</html>
