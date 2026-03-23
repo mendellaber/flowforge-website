@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlowForge â AI Automation Agency</title>
+<meta name="description" content="FlowForge builds AI-powered automation systems for sales teams and property managers. Pre-call intelligence, lead response, SMS maintenance â systems that run while you sleep.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://flowforge.io/">
+<meta property="og:title" content="FlowForge â AI Automation Agency">
+<meta property="og:description" content="Automate the work. Keep the revenue. AI systems for B2B sales teams and property managers.">
+<meta property="og:url" content="https://flowforge.io/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://flowforge.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "FlowForge",
+  "description": "AI automation agency building pre-call sales intelligence, lead response, and property management systems.",
+  "url": "https://flowforge.io",
+  "email": "getflowforge@gmail.com",
+  "sameAs": ["https://instagram.com/getflowforge"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --orange: #FF6B35;
+  --orange-dim: rgba(255,107,53,0.12);
+  --bg: #080808;
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.07);
+  --text: #f5f5f7;
+  --muted: rgba(255,255,255,0.45);
+  --radius: 18px;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); background: rgba(8,8,8,0.7); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icon { width: 30px; height: 30px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.nav-logo-text { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: var(--orange); color: white; text-decoration: none; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; transition: opacity 0.2s; }
+.nav-cta:hover { opacity: 0.88; }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 80px; position: relative; overflow: hidden; }
+.hero-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%); width: 900px; height: 700px; background: radial-gradient(ellipse, rgba(255,107,53,0.08) 0%, transparent 60%); pointer-events: none; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 32px; }
+.hero h1 { font-size: clamp(44px, 7vw, 84px); font-weight: 900; line-height: 1.06; letter-spacing: -0.03em; max-width: 840px; margin-bottom: 24px; }
+.hero h1 span { color: var(--orange); }
+.hero p { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 560px; line-height: 1.65; margin-bottom: 44px; font-weight: 300; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.btn-primary { background: var(--orange); color: white; padding: 16px 36px; border-radius: 50px; font-size: 16px; font-weight: 700; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 0 0 rgba(255,107,53,0); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,107,53,0.35); }
+.btn-ghost { color: var(--text); padding: 16px 36px; border-radius: 50px; font-size: 16px; font-weight: 500; text-decoration: none; border: 1px solid var(--border); transition: border-color 0.2s, background 0.2s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.2); background: var(--surface); }
+
+/* STATS */
+.stats { padding: 0 24px; margin: -20px auto 100px; max-width: 900px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border-radius: var(--radius); overflow: hidden; }
+.stat { background: var(--bg); padding: 36px 24px; text-align: center; }
+.stat-num { font-size: 40px; font-weight: 900; letter-spacing: -0.03em; color: var(--orange); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+/* SECTIONS */
+section { padding: 100px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.section-title { font-size: clamp(32px, 4.5vw, 52px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+.section-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.65; font-weight: 300; }
+
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border-radius: var(--radius); overflow: hidden; margin-top: 60px; }
+.service-card { background: var(--bg); padding: 40px 32px; transition: background 0.2s; }
+.service-card:hover { background: var(--surface); }
+.service-icon { width: 44px; height: 44px; background: var(--orange-dim); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px; }
+.service-card h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+.service-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+.service-card a { font-size: 13px; color: var(--orange); font-weight: 600; text-decoration: none; }
+.service-card a:hover { text-decoration: underline; }
+
+/* HOW */
+.how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 60px; }
+.how-steps { display: flex; flex-direction: column; gap: 28px; }
+.how-step { display: flex; gap: 20px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: white; flex-shrink: 0; margin-top: 2px; }
+.step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em; }
+.step-content p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.how-visual { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.sms-thread { display: flex; flex-direction: column; gap: 12px; }
+.sms-time { font-size: 11px; color: var(--muted); text-align: center; margin-bottom: 4px; letter-spacing: 0.05em; }
+.sms-bubble { padding: 12px 16px; border-radius: 14px; font-size: 13px; line-height: 1.5; max-width: 90%; }
+.sms-in { background: rgba(255,255,255,0.08); align-self: flex-start; color: #ddd; }
+.sms-ai { background: rgba(255,107,53,0.12); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.sms-owner { background: var(--orange); align-self: flex-end; color: white; font-weight: 600; }
+.sms-done { background: rgba(0,204,102,0.1); border: 1px solid rgba(0,204,102,0.2); color: #00CC66; font-size: 12px; font-weight: 600; align-self: flex-start; }
+
+/* TESTIMONIAL */
+.testimonial-section { background: radial-gradient(ellipse at center, rgba(255,107,53,0.06) 0%, transparent 60%); }
+.testimonial-card { max-width: 740px; margin: 0 auto; text-align: center; }
+.testimonial-card blockquote { font-size: clamp(20px, 3vw, 28px); font-weight: 500; line-height: 1.45; letter-spacing: -0.02em; color: var(--text); margin-bottom: 32px; }
+.testimonial-card blockquote::before { content: '"'; color: var(--orange); }
+.testimonial-card blockquote::after { content: '"'; color: var(--orange); }
+.testimonial-author { display: flex; align-items: center; gap: 14px; justify-content: center; }
+.author-avatar { width: 44px; height: 44px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; color: white; }
+.author-name { font-weight: 700; font-size: 15px; }
+.author-title { font-size: 13px; color: var(--muted); }
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+.stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; text-align: center; }
+.stat-box .num { font-size: 44px; font-weight: 900; letter-spacing: -0.03em; color: var(--orange); line-height: 1; }
+.stat-box .lbl { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+/* CTA BAND */
+.cta-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.cta-inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 100px 24px; }
+.cta-inner h2 { font-size: clamp(32px, 5vw, 56px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+.cta-inner p { font-size: 18px; color: var(--muted); margin-bottom: 44px; font-weight: 300; }
+
+/* FOOTER */
+footer { padding: 60px 24px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.footer-logo-icon { width: 28px; height: 28px; background: var(--orange); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.footer-logo-text { font-size: 15px; font-weight: 700; color: var(--text); }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 13px; color: var(--muted); }
+
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">â¡</div>
+      <span class="nav-logo-text">FlowForge</span>
+    </a>
+    <div class="nav-links">
+      <a href="/services.html">Services</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <a href="/contact.html" class="nav-cta">Free Audit</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-eyebrow">â¡ AI Automation Agency</div>
+  <h1>Automate the work.<br><span>Keep the revenue.</span></h1>
+  <p>FlowForge builds AI systems that handle the repetitive parts of your business â sales prep, lead follow-up, maintenance requests â so you can focus on what actually drives growth.</p>
+  <div class="hero-actions">
+    <a href="/contact.html" class="btn-primary">Get a Free Audit</a>
+    <a href="/services.html" class="btn-ghost">See What We Build</a>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat fade-up">
+      <div class="stat-num">45s</div>
+      <div class="stat-label">Pre-call brief<br>delivery time</div>
+    </div>
+    <div class="stat fade-up" style="transition-delay:0.1s">
+      <div class="stat-num">â80%</div>
+      <div class="stat-label">Manager time<br>on requests</div>
+    </div>
+    <div class="stat fade-up" style="transition-delay:0.2s">
+      <div class="stat-num">40Ã</div>
+      <div class="stat-label">Reported ROI<br>by clients</div>
+    </div>
+    <div class="stat fade-up" style="transition-delay:0.3s">
+      <div class="stat-num">3 days</div>
+      <div class="stat-label">Average<br>setup time</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-label fade-up">What We Build</p>
+    <h2 class="section-title fade-up">Six systems.<br>All running while you sleep.</h2>
+    <p class="section-sub fade-up">Each system is custom-built for your stack and ready to deploy in days, not months.</p>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">ð§ </div>
+        <h3>AI Pre-Call Sales Intelligence</h3>
+        <p>Every rep gets a research brief 45 minutes before each call â funding news, pain points, and personalized openers. Automatically.</p>
+        <a href="/services.html">Learn more â</a>
+      </div>
+      <div class="service-card fade-up" style="transition-delay:0.08s">
+        <div class="service-icon">â¡</div>
+        <h3>Lead Response Automation</h3>
+        <p>New form fill or inbound lead? Personalized follow-up sent in under 5 minutes, 24/7. No one falls through the cracks.</p>
+        <a href="/services.html">Learn more â</a>
+      </div>
+      <div class="service-card fade-up" style="transition-delay:0.16s">
+        <div class="service-icon">ð</div>
+        <h3>AI Cold Calling Agent</h3>
+        <p>An AI voice agent that qualifies, handles objections, and books meetings at scale â without burning your SDR team.</p>
+        <a href="/services.html">Learn more â</a>
+      </div>
+      <div class="service-card fade-up" style="transition-delay:0.04s">
+        <div class="service-icon">ð </div>
+        <h3>SMS Tenant Maintenance</h3>
+        <p>Tenants text in. AI handles intake, triage, and follow-up. You approve repairs with a single reply. No more 2am calls.</p>
+        <a href="/services.html">Learn more â</a>
+      </div>
+      <div class="service-card fade-up" style="transition-delay:0.12s">
+        <div class="service-icon">ð</div>
+        <h3>Reporting Automation</h3>
+        <p>Weekly and monthly performance reports built and delivered automatically. No manual exports, no last-minute spreadsheets.</p>
+        <a href="/services.html">Learn more â</a>
+      </div>
+      <div class="service-card fade-up" style="transition-delay:0.2s">
+        <div class="service-icon">ð ï¸</div>
+        <h3>Custom Build</h3>
+        <p>Have a specific workflow you want automated? We scope, design, and build it. If it's repetitive, we can automate it.</p>
+        <a href="/contact.html">Talk to us â</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: rgba(255,255,255,0.015);">
+  <div class="container">
+    <div class="how-grid">
+      <div>
+        <p class="section-label fade-up">How It Works</p>
+        <h2 class="section-title fade-up">Built in days.<br>Running forever.</h2>
+        <p class="section-sub fade-up" style="margin-bottom:0">We audit your workflow, identify the highest-leverage automation, build it on your existing tools, and hand it off fully running.</p>
+        <div class="how-steps" style="margin-top:40px">
+          <div class="how-step fade-up">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Free Audit</h4>
+              <p>We spend 20 minutes understanding your workflow and identify exactly where automation has the highest ROI.</p>
+            </div>
+          </div>
+          <div class="how-step fade-up">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Design & Build</h4>
+              <p>We build the system on your existing stack â no new software required. Most systems deploy in 3â5 business days.</p>
+            </div>
+          </div>
+          <div class="how-step fade-up">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Handoff & Support</h4>
+              <p>You get full documentation, a walkthrough, and 30 days of support. Then it runs on its own.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-visual fade-up">
+        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">ð± SMS Maintenance System â Live</div>
+        <div class="sms-thread">
+          <div class="sms-time">11:47 PM</div>
+          <div class="sms-bubble sms-in">"flooding from ceiling in the bathroom, water everywhere"</div>
+          <div class="sms-bubble sms-ai">â¡ Emergency detected â notifying owner</div>
+          <div class="sms-bubble sms-in" style="font-size:12px;color:var(--muted);">Owner receives: "Unit 4B â BURST PIPE â tenant says water flooding bathroom ceiling. Confirmed emergency. Reply OK to dispatch plumber."</div>
+          <div class="sms-bubble sms-owner">OK</div>
+          <div class="sms-bubble sms-done">â Plumber notified. Tenant updated. Ticket logged. All in 45 seconds.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-card">
+      <blockquote class="fade-up">We cut manager time on maintenance by 80% in the first month. Tenants get faster responses, we get fewer panic calls. It paid for itself in two weeks.</blockquote>
+      <div class="testimonial-author fade-up">
+        <div class="author-avatar">B</div>
+        <div>
+          <div class="author-name">Bristol Property Group</div>
+          <div class="author-title">47-unit portfolio â SMS Maintenance client</div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box fade-up">
+          <div class="num">4h</div>
+          <div class="lbl">avg maintenance response<br>(was 3.2 days)</div>
+        </div>
+        <div class="stat-box fade-up" style="transition-delay:0.1s">
+          <div class="num">â80%</div>
+          <div class="lbl">manager time on<br>maintenance calls</div>
+        </div>
+        <div class="stat-box fade-up" style="transition-delay:0.2s">
+          <div class="num">47</div>
+          <div class="lbl">units managed with<br>one property manager</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-inner">
+    <h2 class="fade-up">Ready to stop doing<br>work a system can do?</h2>
+    <p class="fade-up">Book a free audit. We'll identify the highest-leverage automation in your business and show you exactly what it would look like.</p>
+    <a href="/contact.html" class="btn-primary fade-up">Book Your Free Audit</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">
+      <div class="footer-logo-icon">â¡</div>
+      <span class="footer-logo-text">FlowForge</span>
+    </a>
+    <div class="footer-links">
+      <a href="/services.html">Services</a>
+      <a href="/case-studies.html">Case Studies</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">Â© 2026 FlowForge. getflowforge@gmail.com</div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
