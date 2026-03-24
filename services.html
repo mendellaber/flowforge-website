@@ -39,44 +39,44 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-s
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(24px); background: rgba(8,8,8,0.7); border-bottom: 1px solid var(--border); }
 .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav-logo-icon { width: 30px; height: 30px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+.nav-logo-icon { width: 30px; height: 30px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
 .nav-logo-text { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; }
-.nav-links a:hover { color: var(--text); }
-.nav-links a.active { color: var(--text); }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
 .nav-cta { background: var(--orange); color: white; text-decoration: none; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; transition: opacity 0.2s; }
 .nav-cta:hover { opacity: 0.88; }
-.page-header { padding: 140px 24px 80px; text-align: center; position: relative; overflow: hidden; }
-.header-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%); width: 800px; height: 600px; background: radial-gradient(ellipse, rgba(255,107,53,0.07) 0%, transparent 60%); pointer-events: none; }
-.page-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
-.page-header h1 { font-size: clamp(32px, 5vw, 64px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 20px; max-width: 720px; margin-left: auto; margin-right: auto; }
-.page-header p { font-size: 18px; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.65; font-weight: 300; }
-.services-list { padding: 60px 24px; }
+.page-header { padding: 140px 24px 80px; text-align: center; }
+.page-header .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+.page-header h1 { font-size: clamp(38px, 6vw, 68px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 20px; }
+.page-header p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto; font-weight: 300; line-height: 1.65; }
+.services-section { padding: 0 24px 120px; }
 .container { max-width: 1100px; margin: 0 auto; }
-.service-block { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 80px 0; border-bottom: 1px solid var(--border); }
+.service-block { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; padding: 80px 0; border-bottom: 1px solid var(--border); }
 .service-block:last-child { border-bottom: none; }
 .service-block.flip { direction: rtl; }
 .service-block.flip > * { direction: ltr; }
-.service-copy .service-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 6px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
-.service-copy h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 16px; }
-.service-copy p { font-size: 16px; color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 24px; }
-.feature-list { list-style: none; margin-bottom: 32px; }
-.feature-list li { font-size: 14px; color: var(--muted); padding: 6px 0; display: flex; align-items: center; gap: 10px; }
-.feature-list li::before { content: '\u2192'; color: var(--orange); flex-shrink: 0; }
-.price-tag { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: inline-block; }
-.price-tag .label { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
-.price-tag .price { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: var(--text); }
-.price-tag .price span { font-size: 14px; font-weight: 400; color: var(--muted); }
-.btn-primary { background: var(--orange); color: white; padding: 12px 28px; border-radius: 50px; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,0.3); }
-.service-visual { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; min-height: 320px; display: flex; flex-direction: column; justify-content: flex-start; }
-.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.fade-up.visible { opacity: 1; transform: none; }
-function { padding: 60px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
-.cta-inner { max-width: 700px; margin: 0 auto; text-align: center; padding: 40px 24px; }
-.cta-inner h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
-.cta-inner p { font-size: 16px; color: var(--muted); margin-bottom: 32px; font-weight: 300; }
+.service-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-dim); border: 1px solid rgba(255,107,53,0.2); color: var(--orange); padding: 5px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+.service-block h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
+.service-block > div > p { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; font-weight: 300; }
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.feature-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+.feature-list li::before { content: "â"; color: var(--orange); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.price-tag { display: inline-flex; flex-direction: column; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 22px; margin-bottom: 28px; }
+.price-setup { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: var(--orange); }
+.price-monthly { font-size: 13px; color: var(--muted); }
+.service-visual { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+.visual-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.visual-row { display: flex; align-items: center; gap: 14px; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 10px; margin-bottom: 8px; }
+.visual-row:last-child { margin-bottom: 0; }
+.visual-icon { width: 32px; height: 32px; background: var(--orange-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.visual-row-content .title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.visual-row-content .sub { font-size: 12px; color: var(--muted); }
+.btn-primary { background: var(--orange); color: white; padding: 14px 32px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,107,53,0.35); }
+.cta-band { background: var(--surface); border-top: 1px solid var(--border); padding: 100px 24px; text-align: center; }
+.cta-band h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 16px; }
+.cta-band p { font-size: 17px; color: var(--muted); margin-bottom: 36px; }
 footer { padding: 60px 24px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
 .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -86,11 +86,12 @@ footer { padding: 60px 24px; }
 .footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
 .footer-links a:hover { color: var(--text); }
 .footer-copy { font-size: 13px; color: var(--muted); }
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
 @media (max-width: 768px) {
-  .service-block { grid-template-columns: 1fr; gap: 40px; }
+  .service-block { grid-template-columns: 1fr; gap: 36px; }
   .service-block.flip { direction: ltr; }
   .nav-links { display: none; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -98,227 +99,320 @@ footer { padding: 60px 24px; }
 
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <div class="nav-logo-icon">â¡</div>
       <span class="nav-logo-text">FlowForge</span>
     </a>
     <div class="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/services.html" class="active">Services</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/contact.html">Contact</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <a href="/contact.html" class="nav-cta">Free Audit</a>
+    <a href="contact.html" class="nav-cta">Free Audit</a>
   </div>
 </nav>
 
 <div class="page-header">
-  <div class="header-glow"></div>
-  <div class="page-eyebrow">ð Services</div>
-  <h1>Six systems.<br>One agency.</h1>
-  <p>Everything we build is custom to your stack, deployed in days, and handed off fully running.</p>
+  <div class="eyebrow">â¡ What We Build</div>
+  <h1>Every system we offer.<br>Every price.</h1>
+  <p>Six AI automation products. Each custom-deployed on your existing stack. Most live in under a week.</p>
 </div>
 
-<section class="services-list">
+<section class="services-section">
   <div class="container">
 
-    <!-- SERVICE 1: Pre-Call Intelligence -->
+    <!-- Service 1: Pre-Call Intelligence -->
     <div class="service-block fade-up">
-      <div class="service-copy">
-        <div class="service-tag">ð§  Sales Intelligence</div>
+      <div>
+        <div class="service-tag">ð§  Sales Enablement</div>
         <h2>AI Pre-Call Sales Intelligence</h2>
-        <p>45 minutes before every call, your rep gets a full brief on the prospect -- recent news, funding status, personalized openers, and the shortest path to a "yes". Automatically. Every time.</p>
+        <p>45 minutes before every scheduled call, each sales rep receives a personalized brief â company snapshot, recent funding news, hiring signals, pain points, and 3 AI-generated conversation openers. Zero manual research required.</p>
         <ul class="feature-list">
-          <li>LinkedIn, news, and funding research in seconds</li>
-          <li>Personalized opener one-liners for each prospect</li>
-          <li>Integrates with Calendly, HubSpot, Salesforce</li>
-          <li>Delivers via Slack, SMS, or email</li>
+          <li>Automatic brief delivery via email or Slack before every scheduled call</li>
+          <li>Company news, LinkedIn activity, and funding signal scanning</li>
+          <li>3 personalized conversation starters per prospect</li>
+          <li>Emergency news detection (restructuring, layoffs, hiring freezes)</li>
+          <li>CRM integration â works with HubSpot, Salesforce, and most tools</li>
+          <li>Full audit trail and open tracking</li>
         </ul>
         <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$1,500 <span>setup + $150/mo</span></div>
+          <div class="price-setup">$1,500 setup</div>
+          <div class="price-monthly">+ $150/month to maintain</div>
         </div>
-        <a href="/contact.html" class="btn-primary">Get A Free Audit â</a>
+        <a href="contact.html" class="btn-primary">Get This System</a>
       </div>
       <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">ð± Sample Pre-Call Brief</div>
-        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;margin-bottom:12px;">
-          <div style="font-size:12px;color:var(--orange);font-weight:700;margin-bottom:8px;">â¡ SALESFORCE ACTIVITY â PRIOR TO CALL</div>
-          <div style="font-size:13px;color:#ccc;line-height:1.6;">Apex Growth Partners raised $2.4M Seed in Oct 2025. CEO Jason Ford posted about scaling SDR team last week. Target pain: manual outreach.</div>
+        <div class="visual-label">ð§ Sample Pre-Call Brief</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¢</div>
+          <div class="visual-row-content">
+            <div class="title">Acme Corp â Call in 45 min</div>
+            <div class="sub">87 employees Â· SaaS Â· $12M Series B (Feb 2026)</div>
+          </div>
         </div>
-        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;margin-bottom:12px;">
-          <div style="font-size:12px;color:var(--orange);font-weight:700;margin-bottom:8px;">ð¬ SUGGESTED OPENER</div>
-          <div style="font-size:13px;color:#ccc;line-height:1.6;">"Saw your Seed round closed last quarter -- congrats. Are you building out your SDR team to support the growth, or looking at ways to scale outreach without headcount?"</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¥</div>
+          <div class="visual-row-content">
+            <div class="title">Pain Points Detected</div>
+            <div class="sub">Scaling outbound Â· SDR onboarding Â· CRM hygiene</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð°</div>
+          <div class="visual-row-content">
+            <div class="title">Recent News</div>
+            <div class="sub">Hired 3 new AEs last month. Expanding to EMEA.</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¬</div>
+          <div class="visual-row-content">
+            <div class="title">Opener Suggestion</div>
+            <div class="sub">"Congrats on the Series B â with the hiring push, how are you onboarding new SDRs at scale?"</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 2: Lead Response Automation -->
+    <!-- Service 2: Lead Response -->
     <div class="service-block flip fade-up">
-      <div class="service-copy">
-        <div class="service-tag">â¡ Lead Response</div>
+      <div>
+        <div class="service-tag">â¡ Lead Conversion</div>
         <h2>Lead Response Automation</h2>
-        <p>A new lead comes in. Within 5 minutes, they receive a personalized follow-up that references their industry and use case -- not a generic autoresponder. You step in when they reply.</p>
+        <p>The first 5 minutes after a lead submits a form are worth more than the next 5 hours. This system responds to every new lead with a personalized message â referencing their company, their role, and what they asked â in under 5 minutes, any time of day.</p>
         <ul class="feature-list">
-          <li>Under-5-minute response to every inbound lead</li>
-          <li>Personalized by industry, company size, and use case</li>
-          <li>Integrates with any form, CRM, or website</li>
-          <li>Escalation to human based on intent signals</li>
+          <li>Sub-5-minute personalized response to every new form fill</li>
+          <li>Pulls company and role data from the lead's email domain automatically</li>
+          <li>Multi-step follow-up sequence (day 1, day 3, day 7)</li>
+          <li>Instant Slack/SMS notification to your team when a hot lead comes in</li>
+          <li>Lead scoring and CRM auto-update</li>
+          <li>Works with all major form tools (Typeform, HubSpot, Webflow, etc.)</li>
         </ul>
         <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$1,500 <span>setup + $150/mo</span></div>
+          <div class="price-setup">$1,500 setup</div>
+          <div class="price-monthly">+ $150/month to maintain</div>
         </div>
-        <a href="/contact.html" class="btn-primary">Get A Free Audit â</a>
+        <a href="contact.html" class="btn-primary">Get This System</a>
       </div>
       <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">â¡ Lead Response Timeline</div>
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:13px;color:#ddd;">ð¨ Lead fills form</span>
-            <span style="font-size:12px;color:var(--muted);">0:00</span>
+        <div class="visual-label">â¡ Response Timeline</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Lead submits form</div>
+            <div class="sub">T+0 seconds</div>
           </div>
-          <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.15);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:13px;color:#ccc;">ð  AI researches lead</span>
-            <span style="font-size:12px;color:var(--orange);font-weight:700;">0:45</span>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">AI researches company + role</div>
+            <div class="sub">T+15 seconds</div>
           </div>
-          <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.15);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:13px;color:#ccc;">ð£ Personalized email sent</span>
-            <span style="font-size:12px;color:var(--orange);font-weight:700;">2:20</span>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">âï¸</div>
+          <div class="visual-row-content">
+            <div class="title">Personalized email sent</div>
+            <div class="sub">T+4 minutes</div>
           </div>
-          <div style="background:rgba(0,204,102,0.06);border:1px solid rgba(0,204,102,0.15);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:13px;color:#ccc;">â You step in when they reply</span>
-            <span style="font-size:12px;color:#00CC66;font-weight:700;"><your</span>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð²</div>
+          <div class="visual-row-content">
+            <div class="title">Team Slack notification</div>
+            <div class="sub">T+4 minutes â lead score + context</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 3: AI Cold Calling Agent -->
+    <!-- Service 3: AI Cold Caller -->
     <div class="service-block fade-up">
-      <div class="service-copy">
-        <div class="service-tag">ð  Cold Calling</div>
+      <div>
+        <div class="service-tag">ð Outbound</div>
         <h2>AI Cold Calling Agent</h2>
-        <p>An AI voice agent that calls your list, qualifies prospects, handles objections, and books meetings directly into your calendar -- at a fraction of the cost of an SDR.</p>
+        <p>An AI voice agent that dials prospects, delivers a natural-sounding pitch, handles the most common objections, and books meetings directly into your calendar â without burning out your SDR team on cold lists.</p>
         <ul class="feature-list">
-          <li>Natural conversational AI voice</li>
-          <li>Objection handling built from your best calls</li>
-          <li>HubSpot/Salesforce logging automatically</li>
-          <li>IVR system compliant</li>
+          <li>Natural AI voice â indistinguishable from a human in initial outreach</li>
+          <li>Handles top 10 objections with pre-approved responses</li>
+          <li>Books meetings directly to rep's calendar on agreement</li>
+          <li>Escalates complex conversations to a live rep immediately</li>
+          <li>Full call recording and transcript for every call</li>
+          <li>Compliance-ready â respects do-not-call lists and time zones</li>
         </ul>
         <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$2,000 <span>setup + usage</span></div>
+          <div class="price-setup">$2,000 setup</div>
+          <div class="price-monthly">+ usage-based (per minute)</div>
         </div>
-        <a href="/contact.html" class="btn-primary">Get A Free Audit â</a>
+        <a href="contact.html" class="btn-primary">Get This System</a>
       </div>
       <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">ð± AI Call Flow</div>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 14px;"><span style="color:var(--orange);font-size:11px;font-weight:700;">AI</span> <span style="font-size:13px;color:#ddd;">"Hi Jason, this is Alex from FlowForge on a quick recorded call."</span></div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 14px;"><span style="color:#888;font-size:11px;">Jason</span> <span style="font-size:13px;color:#ddd;">"We're not interested in AI right now."</span></div>
-          <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.15);border-radius:10px;padding:12px 14px;"><span style="color:var(--orange);font-size:11px;font-weight:700;">AI</span> <span style="font-size:13px;color:#ddd;">"Totally fair -- just wondering, are you still relying on manual outreach right now?"</span></div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 14px;"><span style="color:#888;font-size:11px;">Jason</span> <span style="font-size:13px;color:#ddd;">"Yeah, actually."</span></div>
-          <div style="background:rgba(0,204,102,0.06);border:1px solid rgba(0,204,102,0.15);border-radius:10px;padding:12px 14px;font-size:12px;color:#00CC66;font-weight:700;">â Meeting booked in calendar.</div>
+        <div class="visual-label">ð Call Flow</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Load prospect list</div>
+            <div class="sub">Upload CSV or connect your CRM</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¤</div>
+          <div class="visual-row-content">
+            <div class="title">AI dials and pitches</div>
+            <div class="sub">Natural voice, no robocall feel</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð£ï¸</div>
+          <div class="visual-row-content">
+            <div class="title">Handles objections</div>
+            <div class="sub">"Not interested", "Send me an email", "We have a vendor"</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Books meeting or logs outcome</div>
+            <div class="sub">Calendar invite sent, CRM updated automatically</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 4: SMS Maintenance -->
+    <!-- Service 4: SMS Maintenance -->
     <div class="service-block flip fade-up">
-      <div class="service-copy">
-        <div class="service-tag">ð   Property Management</div>
+      <div>
+        <div class="service-tag">ð  Property Management</div>
         <h2>SMS Tenant Maintenance System</h2>
-        <p>Tenants text in their maintenance requests. AI handles intake, triages emergencies, and keeps everyone updated. You approve repairs with one reply. Stop taking calls at 2am.</p>
+        <p>Tenants text their maintenance requests to a single number. AI handles the intake â asks the right questions, detects emergencies, categorizes the issue, and pings you with everything you need to make a decision. You reply "OK" and the system handles the rest.</p>
         <ul class="feature-list">
-          <li>Automatic emergency detection and escalation</li>
-          <li>Full audit trail for every request</li>
-          <li>Tenant updates sent automatically</li>
-          <li>Works with Twilio and existing numbers</li>
+          <li>Tenants text any issue in plain language, any language</li>
+          <li>AI detects emergencies (burst pipes, gas leaks, fire) and alerts instantly</li>
+          <li>Collects photos, location, urgency details via conversational SMS</li>
+          <li>You approve repairs with a single-word reply</li>
+          <li>48-hour follow-up sent to tenant automatically</li>
+          <li>Monthly summary report via SMS â issues, resolutions, costs</li>
+          <li>Full Airtable database of every request, status, and history</li>
         </ul>
         <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$800 <span>setup + $99/mo</span></div>
+          <div class="price-setup">$800 setup</div>
+          <div class="price-monthly">+ $99/month</div>
         </div>
-        <a href="/contact.html" class="btn-primary">Get A Free Audit â</a>
+        <a href="contact.html" class="btn-primary">Get This System</a>
       </div>
       <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">ð± SMS Thread â Live</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 14px;font-size:13px;color:#ddd;align-self:flex-start;max-width:85%;">Tenant: "heat is not working in unit 4B"</div>
-          <div style="background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.2);border-radius:10px;padding:10px 14px;font-size:12px;color:var(--orange);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">â¡ AI handling request â collecting details</div>
-          <div style="background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 14px;font-size:13px;color:#ddd;align-self:flex-start;max-width:85%;">OWNER receives: "Unit 4B heat out - not emergency. Reply OK to schedule HVAC."</div>
-          <div style="background:var(--orange);border-radius:10px;padding:10px 14px;font-size:13px;color:white;font-weight:700;align-self:flex-end;">OK</div>
-          <div style="background:rgba(0,204,102,0.08);border:1px solid rgba(0,204,102,0.2);border-radius:10px;padding:10px 14px;font-size:12px;color:#00CC66;font-weight:700;">â HVAC scheduled. Tenant notified.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SERVICE 5: Reporting Automation -->
-    <div class="service-block fade-up">
-      <div class="service-copy">
-        <div class="service-tag">ð  Reporting</div>
-        <h2>Reporting Automation</h2>
-        <p>Weekly and monthly performance reports are built and delivered automatically -- no manual exports, no spreadsheet assembly, no last-minute panic before board meetings.</p>
-        <ul class="feature-list">
-          <li>Pulls data from CRM, ads, and ops tools</li>
-          <li>Delivers via email, Slack, or PDF</li>
-          <li>Custom KPIs and format for your team</li>
-          <li>Anomaly alerts when something looks off</li>
-        </ul>
-        <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$1,500 <span>setup + $150/mo</span></div>
-        </div>
-        <a href="/contact.html" class="btn-primary">Get A Free Audit â</a>
-      </div>
-      <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">ð Weekly Report Sample</div>
+        <div class="visual-label">ð± Live SMS Thread</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-            <div><div style="font-size:24px;font-weight:900;color:var(--orange);">+23%</div><div style="font-size:11px;color:var(--muted);margin-top:3px;">close rate</div></div>
-            <div><div style="font-size:24px;font-weight:900;color:var(--orange);">42h</div><div style="font-size:11px;color:var(--muted);margin-top:3px;">saved this week</div></div>
-          </div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-            <span style="font-size:18px;">ð</span>
-            <div><div style="font-size:13px;color:#ddd;font-weight:500;">Report delivered</div><div style="font-size:11px;color:var(--muted);">Monday 8:00AM <span style="color:#00CC66;">â</span></div></div>
-          </div>
+          <div style="background:rgba(255,255,255,0.07);border-radius:12px;padding:10px 14px;font-size:13px;align-self:flex-start;max-width:90%;color:#ddd;">"flooding from the ceiling, water everywhere"</div>
+          <div style="background:var(--orange-dim);border:1px solid rgba(255,107,53,0.2);border-radius:12px;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--orange);align-self:flex-start;">â¡ Emergency â Owner Alerted</div>
+          <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:10px 14px;font-size:12px;color:var(--muted);align-self:flex-start;border:1px solid var(--border);">Owner: "Unit 4B emergency â burst pipe. Reply OK to dispatch."</div>
+          <div style="background:var(--orange);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;align-self:flex-end;color:white;">OK</div>
+          <div style="background:rgba(0,204,102,0.1);border:1px solid rgba(0,204,102,0.2);border-radius:12px;padding:8px 14px;font-size:12px;font-weight:600;color:#00CC66;align-self:flex-start;">â Plumber dispatched. Tenant notified. Ticket logged.</div>
         </div>
       </div>
     </div>
 
-    <!-- SERVICE 6: Custom Build -->
-    <div class="service-block flip fade-up">
-      <div class="service-copy">
-        <div class="service-tag">ð ï¸ Custom</div>
-        <h2>Custom Build</h2>
-        <p>Have a repetitive workflow you want automated? We scope it, design the system, build it on your existing stack, and hand it off fully running. If it's repetitive, we can automate it.</p>
+    <!-- Service 5: Reporting -->
+    <div class="service-block fade-up">
+      <div>
+        <div class="service-tag">ð Operations</div>
+        <h2>Reporting Automation</h2>
+        <p>Stop spending Friday afternoons pulling numbers into spreadsheets. This system connects to your data sources, builds your reports automatically, and delivers them to whoever needs them â on whatever schedule you set.</p>
         <ul class="feature-list">
-          <li>Scope call to understand your workflow</li>
-          <li>Built on Make, zapier, or custom code</li>
-          <li>Full documentation and 30 day support</li>
-          <li>Flat project rate -- no surprises</li>
+          <li>Connects to your CRM, ad accounts, analytics, and more</li>
+          <li>Custom report templates built to match your existing formats</li>
+          <li>Automatic weekly and monthly delivery via email or Slack</li>
+          <li>Anomaly detection â get alerted when a metric moves unexpectedly</li>
+          <li>Executive and ops-level report formats available</li>
+          <li>Works with Google Sheets, Notion, Airtable, and any major BI tool</li>
         </ul>
         <div class="price-tag">
-          <div class="label">STARTING AT</div>
-          <div class="price">$2,500 <span>- $4,500 flat</span></div>
+          <div class="price-setup">$1,500 setup</div>
+          <div class="price-monthly">+ $150/month to maintain</div>
         </div>
-        <a href="/contact.html" class="btn-primary">Tall Us About Your Workflow â</a>
+        <a href="contact.html" class="btn-primary">Get This System</a>
       </div>
       <div class="service-visual">
-        <div style="font-size:11px;color:var(--orange);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">ð¡ Recent Custom Builds</div>
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;;">
-            <div style="font-size:13px;color:#ddd;font-weight:500;margin-bottom:4px;">Automated client onboarding system</div>
-            <div style="font-size:11px;color:var(--muted);">Lawyer, 620 total minutes reduced to 8</div>
+        <div class="visual-label">ð Weekly Sales Report â Auto-Sent</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Pipeline this week</div>
+            <div class="sub">$142K â up 23% vs last week â</div>
           </div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;">
-            <div style="font-size:13px;color:#ddd;font-weight:500;margin-bottom:4px;">Invoice and payment reminder pipeline</div>
-            <div style="font-size:11px;color:var(--muted);">Freelancer, $4,200 in overdue recovered</div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Close rate</div>
+            <div class="sub">18.4% â down 2.1pts, needs review â ï¸</div>
           </div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;">
-            <div style="font-size:13px;color:#ddd;font-weight:500;margin-bottom:4px;">Customer support ticket routing system</div>
-            <div style="font-size:11px;color:var(--muted);">E-commerce, 90% of tickets resolved without human</div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Top performer</div>
+            <div class="sub">Sarah Kim â 3 closes, $44K ARR</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¯</div>
+          <div class="visual-row-content">
+            <div class="title">Next week forecast</div>
+            <div class="sub">8 demos scheduled Â· $95K potential</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 6: Custom -->
+    <div class="service-block flip fade-up">
+      <div>
+        <div class="service-tag">ð ï¸ Custom</div>
+        <h2>Custom Automation Build</h2>
+        <p>If your workflow is repetitive, time-consuming, and follows predictable rules â we can automate it. We've built intake systems, document processors, notification flows, data pipelines, and more. Describe the problem. We'll design the system.</p>
+        <ul class="feature-list">
+          <li>Free scoping session to understand the workflow and ROI potential</li>
+          <li>Built on your existing stack â no new software commitments</li>
+          <li>Full documentation and handoff included</li>
+          <li>30 days of post-launch support</li>
+          <li>Priced based on complexity, not hours</li>
+        </ul>
+        <div class="price-tag">
+          <div class="price-setup">$2,500â$4,500</div>
+          <div class="price-monthly">Depends on scope â quoted after discovery</div>
+        </div>
+        <a href="contact.html" class="btn-primary">Start the Conversation</a>
+      </div>
+      <div class="service-visual">
+        <div class="visual-label">ð ï¸ What We've Built</div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Document intake + processing</div>
+            <div class="sub">PDFs in â structured data out, automatically</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð</div>
+          <div class="visual-row-content">
+            <div class="title">Multi-channel alert systems</div>
+            <div class="sub">Slack, SMS, email â the right person at the right time</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ðï¸</div>
+          <div class="visual-row-content">
+            <div class="title">Data pipeline automation</div>
+            <div class="sub">Move, clean, and sync data across tools automatically</div>
+          </div>
+        </div>
+        <div class="visual-row">
+          <div class="visual-icon">ð¤</div>
+          <div class="visual-row-content">
+            <div class="title">Client onboarding workflows</div>
+            <div class="sub">Contract â task creation â welcome sequence, hands-free</div>
           </div>
         </div>
       </div>
@@ -327,24 +421,22 @@ footer { padding: 60px 24px; }
   </div>
 </section>
 
-<section style="padding: 60px 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface);">
-  <div class="cta-inner">
-    <h2 class="fade-up">Not sure which one fits?</h2>
-    <p class="fade-up">Book a free audit. We'll map your workflow and recommend exactly what we'd build and what it would cost.</p>
-    <a href="/contact.html" class="btn-primary fade-up">Get A Free Audit â</a>
-  </div>
-</section>
+<div class="cta-band">
+  <h2 class="fade-up">Not sure which system fits?</h2>
+  <p class="fade-up">Book a free 20-minute audit. We'll figure it out together and tell you exactly what the ROI looks like before you spend anything.</p>
+  <a href="contact.html" class="btn-primary fade-up">Book Free Audit</a>
+</div>
 
 <footer>
   <div class="footer-inner">
-    <a href="/" class="footer-logo">
+    <a href="index.html" class="footer-logo">
       <div class="footer-logo-icon">â¡</div>
       <span class="footer-logo-text">FlowForge</span>
     </a>
     <div class="footer-links">
-      <a href="/index.html">Services</a>
-      <a href="/case-studies.html">Case Studies</a>
-      <a href="/contact.html">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="footer-copy">Â© 2026 FlowForge. getflowforge@gmail.com</div>
   </div>
